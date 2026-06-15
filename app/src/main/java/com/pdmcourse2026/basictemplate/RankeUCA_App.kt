@@ -9,7 +9,7 @@ import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 import com.pdmcourse2026.basictemplate.data.remote.KtorClient
-import com.pdmcourse2026.basictemplate.data.repository.PlaceRepositoryImpl
+import com.pdmcourse2026.basictemplate.repository.PlaceRepositoryImpl
 import com.pdmcourse2026.basictemplate.screens.home.HomeScreen
 import com.pdmcourse2026.basictemplate.screens.home.ResultadosScreen
 import com.pdmcourse2026.basictemplate.viewmodel.HomeViewModel
