@@ -1,4 +1,4 @@
-package com.pdmcourse2026.basictemplate.screens.home
+package com.pdmcourse2026.basictemplate.ui.options
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -42,12 +42,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.pdmcourse2026.basictemplate.viewmodel.OptionsViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun OptionsScreen(
-    viewModel: OptionsViewModel = viewModel(factory = OptionsViewModel.Factory)
+    questionId: Int,
+    viewModel: OptionsViewModel = viewModel(
+        factory = OptionsViewModel.provideFactory(questionId)
+    )
 ) {
     val options by viewModel.options.collectAsStateWithLifecycle()
     var showSheet by rememberSaveable { mutableStateOf(false) }

@@ -1,8 +1,7 @@
 package com.pdmcourse2026.basictemplate.data.model
 
 data class Question(
-    val id : Int = 0,
-    val title : String,
+    val id: Int = 0,
+    val title: String,
     val optionCount: Int = 0,
-
 )

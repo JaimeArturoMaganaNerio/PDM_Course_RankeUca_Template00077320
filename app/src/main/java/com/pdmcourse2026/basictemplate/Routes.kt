@@ -11,5 +11,8 @@ sealed class Routes : NavKey {
   data object Resultados : Routes()
 
   @Serializable
-  data object Options : Routes()
+  data object OptionsList : Routes()
+
+  @Serializable
+  data class Options(val questionId: Int) : Routes()
 }

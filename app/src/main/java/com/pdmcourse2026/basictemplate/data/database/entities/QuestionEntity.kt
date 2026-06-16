@@ -20,3 +20,10 @@ fun QuestionEntity.toModel(): Question {
         optionCount = 0,
     )
 }
+
+fun Question.toEntity(): QuestionEntity {
+    return QuestionEntity(
+        id = id,
+        title = title,
+    )
+}
